@@ -17,5 +17,5 @@ variable "ssh_cidr" {
 variable "key_name" {
   type        = string
   description = "Optional EC2 key pair name for SSH. Leave empty to create instance without SSH access."
-  default     = ""
+  default     = "terraform-demo-key"
 }

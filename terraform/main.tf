@@ -82,7 +82,7 @@ resource "aws_instance" "ml_demo" {
   vpc_security_group_ids      = [aws_security_group.ml_demo_sg.id]
   associate_public_ip_address = true
 
-  key_name = "terraform-demo-key"
+  key_name = var.key_name
 
   user_data = file("${path.module}/user_code.sh")
 
